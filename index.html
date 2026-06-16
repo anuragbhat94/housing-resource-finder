@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marshall County Housing Resource Finder</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./vendor/xlsx.full.min.js"></script>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="page-header">
+        <p class="eyebrow">Marshall County CDC</p>
+        <h1>Housing Resource Finder</h1>
+      </header>
+
+      <section class="filters" aria-label="Search criteria">
+        <label>
+          <span>I am...</span>
+          <select id="residencyFilter">
+            <option value="">Anyone eligible for Marshall County resources</option>
+            <option value="marshall">A Marshall County resident</option>
+            <option value="nonresident">Not a Marshall County resident</option>
+            <option value="developer">A staff member, nonprofit, landlord, or developer</option>
+          </select>
+        </label>
+
+        <label>
+          <span>I am also...</span>
+          <select id="audienceFilter">
+            <option value="">Any role</option>
+          </select>
+        </label>
+
+        <label>
+          <span>I am looking for...</span>
+          <select id="lookingForFilter">
+            <option value="">Any resource type</option>
+          </select>
+        </label>
+
+        <label>
+          <span>I need...</span>
+          <select id="needFilter">
+            <option value="">Any need</option>
+          </select>
+        </label>
+
+        <label class="keyword">
+          <span>Keyword</span>
+          <input id="keywordFilter" type="search" placeholder="Search by program, town, document, or agency">
+        </label>
+
+        <div class="filter-actions">
+          <label class="checkbox">
+            <input id="includeVerifyFilter" type="checkbox">
+            <span>Include staff-verify rows</span>
+          </label>
+          <button id="resetFilters" type="button">Reset</button>
+        </div>
+      </section>
+
+      <section class="status-row" aria-live="polite">
+        <div>
+          <strong id="resultCount">0 resources</strong>
+          <span id="workbookStatus">Loading workbook...</span>
+        </div>
+      </section>
+
+      <section class="results-wrap" aria-label="Matching resources">
+        <table>
+          <thead>
+            <tr>
+              <th>Resource</th>
+              <th>Best for</th>
+              <th>Eligibility</th>
+              <th>Contact</th>
+              <th>Links</th>
+            </tr>
+          </thead>
+          <tbody id="resultsBody">
+            <tr>
+              <td colspan="5">Loading resources...</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>
