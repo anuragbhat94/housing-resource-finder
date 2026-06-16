@@ -1,6 +1,6 @@
 const DATA_SOURCE = {
   type: "csv",
-  url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vS2-u5TBkmpx-ElKzPGORkp62qryGjvtG5wPGibZ7SUtjzNEHU7pTUjzPa2emWz04XEKVkiwR44kis0/pubhtml?gid=796292095&single=truehttps://docs.google.com/spreadsheets/d/e/2PACX-1vS2-u5TBkmpx-ElKzPGORkp62qryGjvtG5wPGibZ7SUtjzNEHU7pTUjzPa2emWz04XEKVkiwR44kis0/pub?gid=796292095&single=true&output=csv",
+  url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vS2-u5TBkmpx-ElKzPGORkp62qryGjvtG5wPGibZ7SUtjzNEHU7pTUjzPa2emWz04XEKVkiwR44kis0/pub?gid=796292095&single=true&output=csv",
   sheetName: "Resources_Web",
 };
 const READY_STATUS = "Ready for public";
